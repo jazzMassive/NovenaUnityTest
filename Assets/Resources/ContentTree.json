@@ -1,0 +1,98 @@
+{
+	"languageContents": [
+		{
+			"languageId": 1,
+			"languageName": "Hrvatski",
+			"topics": [
+				{
+					"topicId": 1,
+					"name": "FlatBox",
+					"type":"Gallery",
+					"media": [
+						{
+							"type": "photo",
+							"value": "https://raw.githubusercontent.com/TheTrainGoes/flatbox-rev5-rgb/main/Flatbox%20rev%205%20RGB%20case%20-%20Basic/Images/Flatbox%20rev%205%20RGB%20-%20Basic%20Case%20-%20Pink.jpg",
+							"name": "test.png"
+						},
+						{
+							"type":"photo",						
+							"value": "https://raw.githubusercontent.com/TheTrainGoes/flatbox-rev5-rgb/main/Flatbox%20rev%205%20RGB%20case%20-%20Basic/Images/Flatbox%20rev%205%20RGB%20-%20Basic%20Case%20-%20Purple.jpg",
+							"name": "test2.png"
+						},
+						{
+							"type": "audio",
+							"value": "https://onlinetestcase.com/wp-content/uploads/2023/06/500-KB-MP3.mp3",
+							"name": "audio.mp3"
+						},
+						{
+							"type": "text",
+							"value": "https://example-files.online-convert.com/document/txt/example.txt",
+							"name": "test.txt"
+						}
+					]
+				},
+				{
+					"topicId": 2,
+					"name": "Arcade Stick",
+					"type":"Gallery",
+					"media": [
+						{
+							"type": "photo",
+							"value": "https://raw.githubusercontent.com/TheTrainGoes/flatbox-rev5-rgb/main/Flatbox%20rev%205%20RGB%20case%20-%20Basic/Images/Flatbox%20rev%205%20RGB%20-%20Basic%20Case%20-%20Pink.jpg",
+							"name": "test.png"
+						},
+						{
+							"type":"photo",						
+							"value": "https://raw.githubusercontent.com/TheTrainGoes/flatbox-rev5-rgb/main/Flatbox%20rev%205%20RGB%20case%20-%20Basic/Images/Flatbox%20rev%205%20RGB%20-%20Basic%20Case%20-%20Purple.jpg",
+							"name": "test2.png"
+						},
+						{
+							"type": "audio",
+							"value": "https://onlinetestcase.com/wp-content/uploads/2023/06/500-KB-MP3.mp3",
+							"name": "audio.mp3"
+						},
+						{
+							"type": "text",
+							"value": "https://example-files.online-convert.com/document/txt/example.txt",
+							"name": "test.txt"
+						}
+					]
+				}
+			]
+		}
+		,
+        {
+			"LanguageId": 2,
+			"LanguageName": "English",
+			"Topics": [
+				{
+					"topicId": 1,
+					"name": "Topic 1",
+					"type":"Gallery",
+					"media": [
+						{
+							"type": "photo",
+							"value": "https://raw.githubusercontent.com/TheTrainGoes/flatbox-rev5-rgb/main/Flatbox%20rev%205%20RGB%20case%20-%20Basic/Images/Flatbox%20rev%205%20RGB%20-%20Basic%20Case%20-%20Pink.jpg",
+							"name": "test.png"
+						},
+						{
+							"type":"photo",						
+							"value": "https://raw.githubusercontent.com/TheTrainGoes/flatbox-rev5-rgb/main/Flatbox%20rev%205%20RGB%20case%20-%20Basic/Images/Flatbox%20rev%205%20RGB%20-%20Basic%20Case%20-%20Purple.jpg",
+							"name": "test2.png"
+						},
+						{
+							"type": "audio",
+							"value": "https://onlinetestcase.com/wp-content/uploads/2023/06/500-KB-MP3.mp3",
+							"name": "audio.mp3"
+						},
+						{
+							"type": "text",
+							"value": "https://example-files.online-convert.com/document/txt/example.txt",
+							"name": "test.txt"
+						}
+					]
+				}
+			]
+		}
+	]
+}
