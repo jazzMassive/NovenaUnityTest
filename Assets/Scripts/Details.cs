@@ -55,6 +55,8 @@ public class Details : MonoBehaviour
         string filepath = Application.persistentDataPath + "/" + _configurationController.GetSelectedLanguageContent() + "/"
             + _configurationController.GetSelectedTopicContent() + "/";
 
+        this._slideshow.ResetPhotos();
+
         foreach (Media media in _media)
         {
             switch (media.type)

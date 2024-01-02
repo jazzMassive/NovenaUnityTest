@@ -15,10 +15,6 @@ public class Slideshow : MonoBehaviour
     [SerializeField]
     private float _fadeTime = 2f;
 
-    private bool _fadeFinished = false;
-
-    private float _deltaTime = 0f;
-
     private bool _isRunning = false;
 
     [SerializeField]
@@ -26,15 +22,15 @@ public class Slideshow : MonoBehaviour
 
     private float _timerRemaining = 5.0f;
 
-    private bool _timerIsRunning = false;
-
 
     void Start()
     {
         _image = GetComponent<Image>();
+    }
 
-
-        _timerIsRunning = true;
+    public void ResetPhotos()
+    {
+        this._photoList.Clear();
     }
 
 

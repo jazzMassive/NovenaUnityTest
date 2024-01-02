@@ -42,7 +42,7 @@ public class ListSelect : MonoBehaviour
                 buttonInstance.GetComponentInChildren<ListButton>().TopicId.text = topic.topicId;
                 buttonInstance.transform.SetParent(buttonContentObject.transform);
                 buttonInstance.GetComponent<RectTransform>().sizeDelta = new Vector2(Screen.width * 0.75f, Screen.height * 0.10f);
-                buttonInstance.GetComponentInChildren<Button>().onClick.AddListener(delegate { TopicButtonPressed(topic); });
+                buttonInstance.GetComponent<Button>().onClick.AddListener(delegate { TopicButtonPressed(topic); });
             }
 
         }
