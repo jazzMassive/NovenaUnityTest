@@ -8,17 +8,17 @@ namespace Assets.Scripts.Model {
     [Serializable]
     public class AppContent
     {
-        public List<LanguageContent> languageContents;
+        public List<LanguageContent> LanguageContents;
 
 
         public List<LanguageContent> GetAllLanguages()
         {
-            return languageContents;
+            return LanguageContents;
         }
 
         public LanguageContent GetLanguageById(string languageId)
         {
-            return languageContents.Find(u => u.languageId == languageId);
+            return LanguageContents.Find(u => u.LanguageId == languageId);
         }
 
 

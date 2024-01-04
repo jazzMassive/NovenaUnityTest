@@ -42,15 +42,15 @@ public class Details : MonoBehaviour
             .GetLanguageById(_configurationController.GetSelectedLanguageContent())
             .GetTopicById(_configurationController.GetSelectedTopicContent());
 
-        _topicId.text = topic.topicId;
-        _topicName.text = topic.name;
+        _topicId.text = topic.TopicId;
+        _topicName.text = topic.Name;
     }
 
     public void LoadDetailContent()
     {
         this._media = _configurationController.GetContent()
             .GetLanguageById(_configurationController.GetSelectedLanguageContent())
-            .GetTopicById(_configurationController.GetSelectedTopicContent()).media;
+            .GetTopicById(_configurationController.GetSelectedTopicContent()).Media;
 
         string filepath = Application.persistentDataPath + "/" + _configurationController.GetSelectedLanguageContent() + "/"
             + _configurationController.GetSelectedTopicContent() + "/";
@@ -59,16 +59,16 @@ public class Details : MonoBehaviour
 
         foreach (Media media in _media)
         {
-            switch (media.type)
+            switch (media.Type)
             {
                 case "photo":
-                    StartCoroutine(GetPhotoFromStorage(filepath, media.name));
+                    StartCoroutine(GetPhotoFromStorage(filepath, media.Name));
                     break;
                 case "audio":
-                    StartCoroutine(GetAudioFromStorage(filepath, media.name));
+                    StartCoroutine(GetAudioFromStorage(filepath, media.Name));
                     break;
                 case "text":
-                    GetTextFromStorage(filepath, media.name);
+                    GetTextFromStorage(filepath, media.Name);
                     break;
             }
         }

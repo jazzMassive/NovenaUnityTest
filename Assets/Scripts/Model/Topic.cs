@@ -7,9 +7,9 @@ namespace Assets.Scripts.Model
     [Serializable]
     public class Topic
     {
-        public string topicId;
-        public string name;
-        public string type;
-        public List<Media> media;
+        public string TopicId;
+        public string Name;
+        public string Type;
+        public List<Media> Media;
     }
 }

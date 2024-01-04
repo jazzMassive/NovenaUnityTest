@@ -23,8 +23,8 @@ public class ConfigurationController : MonoBehaviour
     private string _selectedLanguageContent = null;
     private string _selectedTopicContent = null;
 
-    public Action onLanguageChange;
-    public Action onTopicChange;
+    public Action OnLanguageChange;
+    public Action OnTopicChange;
 
     void Awake()
     {
@@ -55,7 +55,7 @@ public class ConfigurationController : MonoBehaviour
     public void SetSelectedLanguageContent(string value)
     {
         _selectedLanguageContent = value;
-        onLanguageChange?.Invoke();
+        OnLanguageChange?.Invoke();
     }
 
     public string GetSelectedTopicContent()
@@ -66,31 +66,31 @@ public class ConfigurationController : MonoBehaviour
     public void SetSelectedTopicContent(string value)
     {
         _selectedTopicContent = value;
-        onTopicChange?.Invoke();
+        OnTopicChange?.Invoke();
     }
 
     private void GetRequriedAssets()
     {
         foreach( var language in _appContent.GetAllLanguages())
         {
-            foreach (var topic in language.topics )
+            foreach (var topic in language.Topics )
             {
-                CreateTopicDirectory(topic.topicId, language.languageId);
-                foreach(var m in topic.media)
+                CreateTopicDirectory(topic.TopicId, language.LanguageId);
+                foreach(var m in topic.Media)
                 {
-                    string savePath = language.languageId + "/" + topic.topicId + "/" + m.name;
+                    string savePath = language.LanguageId + "/" + topic.TopicId + "/" + m.Name;
                     if (!File.Exists(Application.persistentDataPath + "/" + savePath))
                     {
-                        switch (m.type)
+                        switch (m.Type)
                         {
                             case "photo":
-                                StartCoroutine(DownloadImage(m.value, savePath));
+                                StartCoroutine(DownloadImage(m.Value, savePath));
                                 break;
                             case "audio":
-                                StartCoroutine(DownloadAudio(m.value, savePath));
+                                StartCoroutine(DownloadAudio(m.Value, savePath));
                                 break;
                             case "text":
-                                StartCoroutine(DownloadText(m.value, savePath));
+                                StartCoroutine(DownloadText(m.Value, savePath));
                                 break;
 
                         }

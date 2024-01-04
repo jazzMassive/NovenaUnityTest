@@ -6,14 +6,14 @@ namespace Assets.Scripts.Model
     [Serializable]
     public class LanguageContent
     {
-        public string languageId;
-        public string languageName;
-        public List<Topic> topics;
+        public string LanguageId;
+        public string LanguageName;
+        public List<Topic> Topics;
 
 
         public Topic GetTopicById(string id)
         {
-            return topics.Find(u => u.topicId == id);
+            return Topics.Find(u => u.TopicId == id);
         }
     }
 }

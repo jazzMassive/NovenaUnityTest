@@ -8,8 +8,8 @@ namespace Assets.Scripts.Model
     [Serializable]
     public class Media
     {
-        public string type;
-        public string value;
-        public string name;
+        public string Type;
+        public string Value;
+        public string Name;
     }
 }

@@ -8,39 +8,39 @@ using UnityEngine.UI;
 public class ListSelect : MonoBehaviour
 {
     [SerializeField]
-    private ConfigurationController configurationController;
+    private ConfigurationController _configurationController;
 
     [SerializeField]
-    private MenuController menuController;
+    private MenuController _menuController;
 
     [SerializeField]
-    private GameObject buttonContentObject;
+    private GameObject _buttonContentObject;
 
     [SerializeField]
-    private GameObject buttonPrefab;
+    private GameObject _buttonPrefab;
 
     private List<string> _topicNames = new List<string>();
 
     [SerializeField]
-    private Page detailsPage;
+    private Page _detailsPage;
 
 
     private void Awake()
     {
-        configurationController.onLanguageChange += OnLanguageChange;
+        _configurationController.OnLanguageChange += OnLanguageChange;
     }
 
     public void InitializeButtons()
     {
-        foreach (var topic in configurationController.GetContent().GetLanguageById(configurationController.GetSelectedLanguageContent()).topics)
+        foreach (var topic in _configurationController.GetContent().GetLanguageById(_configurationController.GetSelectedLanguageContent()).Topics)
         {
-            if (!this._topicNames.Contains(topic.name))
+            if (!this._topicNames.Contains(topic.Name))
             {
-                this._topicNames.Add(topic.name);
-                GameObject buttonInstance = Instantiate(buttonPrefab);
-                buttonInstance.GetComponentInChildren<ListButton>().TopicName.text = topic.name;
-                buttonInstance.GetComponentInChildren<ListButton>().TopicId.text = topic.topicId;
-                buttonInstance.transform.SetParent(buttonContentObject.transform);
+                this._topicNames.Add(topic.Name);
+                GameObject buttonInstance = Instantiate(_buttonPrefab);
+                buttonInstance.GetComponentInChildren<ListButton>().TopicName.text = topic.Name;
+                buttonInstance.GetComponentInChildren<ListButton>().TopicId.text = topic.TopicId;
+                buttonInstance.transform.SetParent(_buttonContentObject.transform);
                 buttonInstance.GetComponent<RectTransform>().sizeDelta = new Vector2(Screen.width * 0.75f, Screen.height * 0.10f);
                 buttonInstance.GetComponent<Button>().onClick.AddListener(delegate { TopicButtonPressed(topic); });
             }
@@ -50,7 +50,7 @@ public class ListSelect : MonoBehaviour
 
     private void OnLanguageChange()
     {
-        foreach (Transform child in buttonContentObject.gameObject.transform)
+        foreach (Transform child in _buttonContentObject.gameObject.transform)
         {
             Destroy(child.gameObject);
         }
@@ -59,11 +59,11 @@ public class ListSelect : MonoBehaviour
 
     private void TopicButtonPressed(Topic topic)
     {
-        configurationController.SetSelectedTopicContent(topic.topicId);
-        switch (topic.type)
+        _configurationController.SetSelectedTopicContent(topic.TopicId);
+        switch (topic.Type)
         {
             case "Gallery":
-                menuController.PushPage(detailsPage);
+                _menuController.PushPage(_detailsPage);
                 break;
             case "Extra":
                 //menuController.PushPage(extraPage);
