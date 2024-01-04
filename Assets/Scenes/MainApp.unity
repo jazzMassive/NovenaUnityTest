@@ -1846,11 +1846,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: badf19472fe30f84a8d3a1f1bb98bb3e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  configurationController: {fileID: 1182108446}
-  menuController: {fileID: 429076549}
-  buttonContentObject: {fileID: 466481645}
-  buttonPrefab: {fileID: 472936058181906684, guid: fc4972e7574dea84d82e3eb8819e6193, type: 3}
-  pageForButtons: {fileID: 2113594761}
+  _configurationController: {fileID: 1182108446}
+  _menuController: {fileID: 429076549}
+  _buttonContentObject: {fileID: 466481645}
+  _buttonPrefab: {fileID: 472936058181906684, guid: fc4972e7574dea84d82e3eb8819e6193, type: 3}
+  _pageForButtons: {fileID: 2113594761}
 --- !u!1 &834872096
 GameObject:
   m_ObjectHideFlags: 0
@@ -5073,8 +5073,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e28a23b5af1d184e9c96effe056a550, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  configurationController: {fileID: 1182108446}
-  menuController: {fileID: 429076549}
-  buttonContentObject: {fileID: 280077872}
-  buttonPrefab: {fileID: 2110144513818460193, guid: 3d7e16537170d9f498eb4dd1a95d58f6, type: 3}
-  detailsPage: {fileID: 156191684}
+  _configurationController: {fileID: 1182108446}
+  _menuController: {fileID: 429076549}
+  _buttonContentObject: {fileID: 280077872}
+  _buttonPrefab: {fileID: 2110144513818460193, guid: 3d7e16537170d9f498eb4dd1a95d58f6, type: 3}
+  _detailsPage: {fileID: 156191684}
